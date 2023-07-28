@@ -16,8 +16,12 @@ namespace GroupByCombinationToListDict
     {
         public TerminalRestriction()
         {
+            Crops = new Collection<TerminalRestrictionGroupCrop>();
         }
+        public ICollection<TerminalRestrictionGroupCrop> Crops { get; set; }
 
+        public int CropId { get; set; }
+        public int TerminalGateId { get; set; }
         public int Id { get; set; }
 
         [JsonIgnore]
